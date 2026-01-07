@@ -1,6 +1,7 @@
 import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
+import AdMobBanner from '@/components/admob-banner';
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
@@ -74,6 +75,9 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
       </ThemedView>
+      <ThemedView style={styles.adContainer}>
+        <AdMobBanner />
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
@@ -94,5 +98,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
+  },
+  adContainer: {
+    alignItems: 'center',
+    marginVertical: 20,
   },
 });
